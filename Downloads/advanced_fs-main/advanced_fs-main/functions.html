@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // <!-- <script src = "./functions.js"> -->
+    // setInterval(()=>{
+    //     console.log("Hello every 2 seconds");
+    // },2000);
+    function add()
+    {
+        console.log(20+30);
+    }
+    add();
+
+    let myPromise=new Promise((resolve,reject)=>
+    {
+        let a=10;
+        if(a<5){
+            return resolve("Success: a is greater than 5");
+        }
+        else{
+            return reject("Error: a is not greater than 5");
+        }
+    })
+    myPromise.then((message)=>
+    {
+        console.log(message);
+    }).catch((message)=>
+    {
+        console.log(message);
+    });
+    console.log(myPromise);
+    //Promises are used to handle asynchronous operations in JavaScript.
+    //  They represent a value that may be available now, in the future, or never.
+    // A Promise is in one of these states:
+    // 1.Pending: Initial state, neither fulfilled nor rejected.
+    // 2.Fulfilled: The operation completed successfully.
+    // 3.Rejected: The operation failed.
+    // Example of a Promise that resolves after 2 seconds
+    // myPromise=new Promise((resolve,reject)=>
+    // {
+    //     setTimeout(()=>
+    //     {
+    //         resolve("Promise resolved successfully!");
+    //     },2000);
+    // });
+    </script>
+    
+</body>
+</html>
